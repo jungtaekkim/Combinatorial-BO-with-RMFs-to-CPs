@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Jungtaek
+.DS_Store
+__MACOSX/
+*.swp
+*.npy
