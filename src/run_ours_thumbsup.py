@@ -69,14 +69,16 @@ if __name__ == '__main__':
     list_all = []
 
     num_bo = 10
-    num_init = 1
+    num_init = 1 # Now, it has to be 1.
+    num_iter = 100
+    num_iter += num_init
 
     dim_target = 10
     dim_problem = 20
 
     for seed in range(0, num_bo):
         print(dim_problem, dim_target, seed)
-        minimizers, minima = bo_ours(dim_problem, seed, np.minimum(100 + num_init, 2**dim_problem), dim_target, num_init)
+        minimizers, minima = bo_ours(dim_problem, seed, np.minimum(num_iter, 2**dim_problem), dim_target, num_init)
         print(minima)
 
         dict_exp = {
